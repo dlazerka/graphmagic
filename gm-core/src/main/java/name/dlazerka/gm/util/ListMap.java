@@ -31,6 +31,10 @@ import java.util.Set;
 public class ListMap<K, V> extends AbstractMap<K, V> implements Map<K, V> {
 	LinkedSet<Map.Entry<K, V>> entrySet = new LinkedSet<Map.Entry<K, V>>();
 
+
+	public ListMap() {
+	}
+
 	public ListMap(Entry<K, V>... initialEntries) {
 		entrySet.addAll(Arrays.asList(initialEntries));
 	}

@@ -139,7 +139,7 @@ public class GraphPanel extends JPanel {
 	public void startDraggingEdge(VertexPanel vertexPanel) {
 		draggingEdgeFrom = vertexPanel;
 
-		newEdgePanel.setSource(vertexPanel);
+		newEdgePanel.setTail(vertexPanel);
 		newEdgePanel.setVisible(true);
 	}
 
