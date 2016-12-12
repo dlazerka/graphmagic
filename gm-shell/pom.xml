@@ -21,54 +21,52 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <name>GraphMagic GUI Shell</name>
-    <groupId>name.dlazerka.gm</groupId>
-    <artifactId>gm-shell</artifactId>
-    <version>${graphmagic.version}</version>
-    <packaging>jar</packaging>
+	<modelVersion>4.0.0</modelVersion>
+	<name>GraphMagic GUI Shell</name>
+	<artifactId>gm-shell</artifactId>
+	<packaging>jar</packaging>
 
-    <parent>
-        <groupId>name.dlazerka.gm</groupId>
-        <artifactId>gm-all</artifactId>
-        <version>${graphmagic.version}</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+	<parent>
+		<groupId>name.dlazerka.gm</groupId>
+		<artifactId>gm-all</artifactId>
+		<version>0.2.1</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>name.dlazerka.gm.ui.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2-beta-5</version>
-                <configuration>
-                    <descriptors>
-                        <descriptor>assembly.xml</descriptor>
-                    </descriptors>
-                    <finalName>GraphMagic</finalName>
-                    <outputDirectory>target</outputDirectory>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>name.dlazerka.gm.ui.Main</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2-beta-5</version>
+				<configuration>
+					<descriptors>
+						<descriptor>assembly.xml</descriptor>
+					</descriptors>
+					<finalName>GraphMagic</finalName>
+					<outputDirectory>target</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
-    <dependencies>
-        <dependency>
-            <groupId>name.dlazerka.gm</groupId>
-            <artifactId>gm-core</artifactId>
-            <version>${graphmagic.version}</version>
-        </dependency>
-    </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>name.dlazerka.gm</groupId>
+			<artifactId>gm-core</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+	</dependencies>
 
 </project>
